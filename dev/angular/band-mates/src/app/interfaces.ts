@@ -37,11 +37,12 @@ export interface IUserData {
 export interface IUser {
     id: number;
     username: string;
+    userData: IUserData;
     displayName?: string;
 
     bands?: Array<IBand>;
     serviceProviders?: Array<IServiceProvider>;
-    venues: Array<IVenue>;
+    venues?: Array<IVenue>;
 }
 
 

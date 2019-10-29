@@ -8,6 +8,12 @@
             "script": "start",
             "path": "dev/angular/band-mates/",
             "problemMatcher": []
+        },
+        {
+            "type": "npm",
+            "script": "api",
+            "path": "dev/angular/band-mates/",
+            "problemMatcher": []
         }
     ]
 }

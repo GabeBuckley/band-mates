@@ -1,0 +1,44 @@
+<section class="user-manager">
+  <article class="user-browser" *ngIf="mode === 'browse_list'">
+    <mat-toolbar color="accent">
+      <mat-toolbar-row>
+        <span>User Manager</span>
+        <span class="spacer"></span>
+        <mat-icon (click)="newUser()" class=" example-icon" aria-hidden="false" aria-label="Example heart icon">
+          person_add
+        </mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <table mat-table [dataSource]="userList" class="mat-elevation-z8">
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef> ID </th>
+        <td mat-cell *matCellDef="let element;"> {{element.id}} </td>
+      </ng-container>
+      <ng-container matColumnDef="username">
+        <th mat-header-cell *matHeaderCellDef> Username </th>
+        <td mat-cell *matCellDef="let element"> {{element.username}} </td>
+      </ng-container>
+      <ng-container matColumnDef="fullname">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.userData.name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.userData.email}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </article>
+  <article class="new-user" *ngIf="mode === 'new_user'">
+    <mat-toolbar color="accent">
+      <mat-toolbar-row>
+        <span>New User</span>
+        <span class="spacer"></span>
+        <mat-icon (click)="newUser()" class=" example-icon" aria-hidden="false" aria-label="Example heart icon">
+          person_add
+        </mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </article>
+</section>

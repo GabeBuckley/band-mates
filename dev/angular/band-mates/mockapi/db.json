@@ -1,0 +1,27 @@
+{
+  "site": {
+    "title": "bandmates.com",
+    "tagline": "Made by working musicians, for working musicians"
+  },
+  "users": [{
+      "id": 1,
+      "username": "jimi",
+      "userData": {
+        "name": "James Marshall Hendrix",
+        "email": "jimi@experience.com"
+      },
+      "displayName": "Jimi Hendrix",
+      "bands": []
+    },
+    {
+      "id": 2,
+      "username": "clappers",
+      "userData": {
+        "name": "Eric Clapton",
+        "email": "eric@cream.com"
+      },
+      "displayName": "Eric Clapton",
+      "bands": []
+    }
+  ]
+}
