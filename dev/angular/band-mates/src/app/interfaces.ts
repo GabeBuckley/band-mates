@@ -35,7 +35,7 @@ export interface IUserData {
 
 
 export interface IUser {
-    id: number;
+    id?: number;
     username: string;
     userData: IUserData;
     displayName?: string;

@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { MatIconModule, MatToolbarModule, MatTableModule } from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +30,13 @@ import { UserManagerComponent } from './admin/user-manager/user-manager.componen
     MatIconModule,
     MatToolbarModule,
     HttpClientModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule,
+    MatButtonModule,
+    MatButtonToggleModule
+  ],
+  exports: [
+    MatButtonModule
   ],
   providers: [
     HttpClient,

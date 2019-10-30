@@ -3,7 +3,8 @@
     "title": "bandmates.com",
     "tagline": "Made by working musicians, for working musicians"
   },
-  "users": [{
+  "users": [
+    {
       "id": 1,
       "username": "jimi",
       "userData": {
@@ -22,6 +23,15 @@
       },
       "displayName": "Eric Clapton",
       "bands": []
+    },
+    {
+      "username": "becks",
+      "userData": {
+        "name": "Jeff Beck",
+        "email": "jeffrey@yardbirds.com"
+      },
+      "displayName": "Jeff Beck",
+      "id": 3
     }
   ]
 }
