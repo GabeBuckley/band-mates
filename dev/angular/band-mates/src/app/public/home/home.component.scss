@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+.home {
+  padding: 0.5rem;
+
+  article {
+    margin: 0.25rem;
+    padding: 0.375rem;
+    @include mat-elevation(4);
+
+    min-height: 10rem;
+  }
+}

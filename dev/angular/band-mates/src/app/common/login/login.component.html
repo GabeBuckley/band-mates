@@ -1,0 +1,19 @@
+<!-- <div class="g-signin2" data-onsuccess="onSignIn"></div> -->
+<section class="login">
+  <fieldset>
+    <legend>Login</legend>
+    <mat-form-field class="full-width">
+      <input matInput id="username" type="text" placeholder="Username / Email" value="gabe">
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput id="password" type="password" placeholder="Password" value="Password123">
+    </mat-form-field>
+    <div class="button-row">
+
+      <button mat-fab color="primary" (click)="doLogin()">
+        <mat-icon>check_circle</mat-icon>
+      </button>
+
+    </div>
+  </fieldset>
+</section>

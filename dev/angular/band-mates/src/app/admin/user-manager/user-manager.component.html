@@ -35,10 +35,29 @@
       <mat-toolbar-row>
         <span>New User</span>
         <span class="spacer"></span>
-        <mat-icon (click)="newUser()" class=" example-icon" aria-hidden="false" aria-label="Example heart icon">
-          person_add
+        <mat-icon (click)="cancelBackToHome()" class=" example-icon" aria-hidden="false"
+          aria-label="Example heart icon">
+          cancel
         </mat-icon>
       </mat-toolbar-row>
     </mat-toolbar>
+    <form class="new-user-form">
+      <mat-form-field class="full-width">
+        <input matInput id="username" placeholder="Username" value="">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput id="email" placeholder="Email" value="">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput id="name" placeholder="Full Name" value="">
+      </mat-form-field>
+      <div class="button-row">
+
+        <button mat-fab color="primary" (click)="saveNewUser()">
+          <mat-icon>save</mat-icon>
+        </button>
+
+      </div>
+    </form>
   </article>
 </section>

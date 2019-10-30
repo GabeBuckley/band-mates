@@ -8,7 +8,8 @@
       "username": "jimi",
       "userData": {
         "name": "James Marshall Hendrix",
-        "email": "jimi@experience.com"
+        "email": "jimi@experience.com",
+        "passwordHash": "U2FsdGVkX19MHil+V3d6OJqtCNRzAvlutshDIkfuYgE="
       },
       "displayName": "Jimi Hendrix",
       "bands": []
@@ -18,10 +19,129 @@
       "username": "clappers",
       "userData": {
         "name": "Eric Clapton",
-        "email": "eric@cream.com"
+        "email": "eric@cream.com",
+        "passwordHash": "U2FsdGVkX19MHil+V3d6OJqtCNRzAvlutshDIkfuYgE="
       },
       "displayName": "Eric Clapton",
       "bands": []
+    },
+    {
+      "username": "becks",
+      "userData": {
+        "name": "Jeff Beck",
+        "email": "jeffrey@yardbirds.com",
+        "passwordHash": "U2FsdGVkX19MHil+V3d6OJqtCNRzAvlutshDIkfuYgE="
+      },
+      "displayName": "Jeff Beck",
+      "id": 3
+    },
+    {
+      "username": "gabe",
+      "userData": {
+        "name": "Gabe Buckley",
+        "email": "gb@gabrielbuckley.com",
+        "passwordHash": "U2FsdGVkX1+Txpf9zJmUIgOIuU9pkgCOueA5erMblYU="
+      },
+      "displayName": "Gabe Buckley",
+      "id": 4,
+      "bands": [{
+        "id": 1,
+        "name": "The Whiskey Protocol"
+      }]
+    },
+    {
+      "username": "mik",
+      "userData": {
+        "name": "Mik Stevens",
+        "email": "mick@gmail.com",
+        "passwordHash": "U2FsdGVkX1+Txpf9zJmUIgOIuU9pkgCOueA5erMblYU="
+      },
+      "displayName": "Mik Stevens",
+      "id": 5,
+      "bands": [{
+        "id": 1,
+        "name": "The Whiskey Protocol"
+      }]
+    },
+    {
+      "username": "catherine",
+      "userData": {
+        "name": "Catherine Buckley",
+        "email": "cath@gmail.com",
+        "passwordHash": "U2FsdGVkX1+Txpf9zJmUIgOIuU9pkgCOueA5erMblYU="
+      },
+      "displayName": "Catherine Buckley",
+      "id": 6,
+      "bands": [{
+        "id": 1,
+        "name": "The Whiskey Protocol"
+      }]
+    },
+    {
+      "username": "cam",
+      "userData": {
+        "name": "Cameron Mitchell",
+        "email": "cam@gmail.com",
+        "passwordHash": "U2FsdGVkX1+Txpf9zJmUIgOIuU9pkgCOueA5erMblYU="
+      },
+      "displayName": "Cameron Mitchell",
+      "id": 7,
+      "bands": [{
+        "id": 1,
+        "name": "The Whiskey Protocol"
+      }]
+    },
+    {
+      "username": "tezz",
+      "userData": {
+        "name": "Terry Osmond",
+        "email": "tezz@gmail.com",
+        "passwordHash": "U2FsdGVkX1+Txpf9zJmUIgOIuU9pkgCOueA5erMblYU="
+      },
+      "displayName": "Terry Osmond",
+      "id": 8,
+      "bands": [{
+        "id": 1,
+        "name": "The Whiskey Protocol"
+      }]
     }
-  ]
+  ],
+
+  "bands": [{
+    "id": 1,
+    "name": "The Whiskey Protocol",
+    "genres": [
+      "Rock", "Country", "Blues"
+    ],
+    "configurations": [{
+      "id": 1,
+      "name": "5 Piece",
+      "members": [{
+          "username": "gabe",
+          "displayName": "Gabe Buckley",
+          "id": 4
+        },
+        {
+          "username": "mik",
+          "displayName": "Mik Stevens",
+          "id": 5
+        },
+        {
+          "username": "catherine",
+          "displayName": "Catherine Buckley",
+          "id": 6
+        },
+        {
+          "username": "cam",
+          "displayName": "Cameron Mitchell",
+          "id": 7
+        },
+        {
+          "username": "tezz",
+          "displayName": "Terry Osmond",
+          "id": 8
+        }
+      ]
+    }]
+  }]
 }

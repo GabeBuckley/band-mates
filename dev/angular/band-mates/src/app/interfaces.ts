@@ -31,11 +31,12 @@ export interface IVenue {
 export interface IUserData {
     name?: string;
     email?: string;
+    passwordHash?: string;
 }
 
 
 export interface IUser {
-    id: number;
+    id?: number;
     username: string;
     userData: IUserData;
     displayName?: string;
