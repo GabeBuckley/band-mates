@@ -1,1 +1,13 @@
-<p>home works!</p>
+<section class="home">
+
+  <article class="user-options" *ngIf="loggedInUser">
+    <h3>Welcome {{loggedInUser.displayName}}</h3>
+  </article>
+
+  <article class="band-options">
+    <h3>My Bands</h3>
+    <mat-list *ngIf="loggedInUser && loggedInUser.bands">
+      <mat-list-item *ngFor="let band of loggedInUser.bands"> {{band.name}} </mat-list-item>
+    </mat-list>
+  </article>
+</section>

@@ -31,6 +31,7 @@ export interface IVenue {
 export interface IUserData {
     name?: string;
     email?: string;
+    passwordHash?: string;
 }
 
 

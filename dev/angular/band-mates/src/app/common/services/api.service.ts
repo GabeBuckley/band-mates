@@ -15,6 +15,9 @@ export class ApiService {
     return this.http.get(this.baseURI.concat('users'));
   }
 
+  user(intUserID: number) {
+    return this.http.get(this.baseURI.concat('users/').concat(intUserID.toString()));
+  }
   saveUser(objUser: IUser) {
     return this.http.post(this.baseURI.concat('users'), objUser);
   }
