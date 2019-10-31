@@ -227,3 +227,13 @@ body {
 span.spacer {
   flex: auto;
 }
+
+.toolbar {
+  text-align: right;
+}
+
+.band-member-list-card {
+  mat-card-title {
+    font-size: 15px;
+  }
+}

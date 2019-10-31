@@ -21,4 +21,12 @@ export class ApiService {
   saveUser(objUser: IUser) {
     return this.http.post(this.baseURI.concat('users'), objUser);
   }
+
+  bands() {
+    return this.http.get(this.baseURI.concat('bands'));
+  }
+
+  band(strBandId: string) {
+    return this.http.get(this.baseURI.concat('bands/').concat(strBandId));
+  }
 }

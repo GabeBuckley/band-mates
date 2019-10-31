@@ -7,7 +7,9 @@
   <article class="band-options">
     <h3>My Bands</h3>
     <mat-list *ngIf="loggedInUser && loggedInUser.bands">
-      <mat-list-item *ngFor="let band of loggedInUser.bands"> {{band.name}} </mat-list-item>
+      <mat-list-item *ngFor="let band of loggedInUser.bands">
+        <a routerLink="/edit/band/{{band.id}}"> {{band.name}} </a>
+      </mat-list-item>
     </mat-list>
   </article>
 </section>

@@ -2,11 +2,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
-import { MatIconModule, MatToolbarModule, MatTableModule } from '@angular/material';
-import { MatInputModule } from '@angular/material/input';
+
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule, MatToolbarModule, MatTableModule } from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +21,8 @@ import { HomeComponent } from './public/home/home.component';
 import { HeaderComponent } from './common/header/header.component';
 import { UserManagerComponent } from './admin/user-manager/user-manager.component';
 import { LoginComponent } from './common/login/login.component';
+import { BandmanagerComponent } from './secured/bandmanager/bandmanager.component';
+import { ProfilemanagerComponent } from './secured/profilemanager/profilemanager.component';
 
 
 
@@ -24,7 +32,9 @@ import { LoginComponent } from './common/login/login.component';
     HomeComponent,
     HeaderComponent,
     UserManagerComponent,
-    LoginComponent
+    LoginComponent,
+    BandmanagerComponent,
+    ProfilemanagerComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +47,10 @@ import { LoginComponent } from './common/login/login.component';
     MatInputModule,
     MatButtonModule,
     MatButtonToggleModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule,
+    MatExpansionModule,
+    MatCardModule
   ],
   exports: [
     MatButtonModule

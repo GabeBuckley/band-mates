@@ -110,36 +110,43 @@
   "bands": [{
     "id": 1,
     "name": "The Whiskey Protocol",
+    "slug": "the-whiskey-protocol",
     "genres": [
       "Rock", "Country", "Blues"
     ],
     "configurations": [{
       "id": 1,
       "name": "5 Piece",
+      "description": "Full band, ready to rock and roll",
       "members": [{
           "username": "gabe",
           "displayName": "Gabe Buckley",
-          "id": 4
+          "id": 4,
+          "roles": ["Guitar", "Vocals", "Mandolin", "Harmonica", "Tamborine"]
         },
         {
           "username": "mik",
           "displayName": "Mik Stevens",
-          "id": 5
+          "id": 5,
+          "roles": ["Guitar", "Vocals"]
         },
         {
           "username": "catherine",
           "displayName": "Catherine Buckley",
-          "id": 6
+          "id": 6,
+          "roles": ["Vocals"]
         },
         {
           "username": "cam",
           "displayName": "Cameron Mitchell",
-          "id": 7
+          "id": 7,
+          "roles": ["Bass"]
         },
         {
           "username": "tezz",
           "displayName": "Terry Osmond",
-          "id": 8
+          "id": 8,
+          "roles": ["Drums"]
         }
       ]
     }]
