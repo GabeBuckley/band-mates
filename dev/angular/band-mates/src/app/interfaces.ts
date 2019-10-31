@@ -28,6 +28,7 @@ export interface IUserData {
 
 
 export interface IUser {
+
     id?: number;
     username: string;
     userData: IUserData;
@@ -36,6 +37,8 @@ export interface IUser {
     bands?: Array<IBand>;
     serviceProviders?: Array<IServiceProvider>;
     venues?: Array<IVenue>;
+
+    avatar?: string;
 }
 
 export interface IBandConfiguration {

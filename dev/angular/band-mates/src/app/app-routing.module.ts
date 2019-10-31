@@ -5,7 +5,8 @@ import { Routes, RouterModule } from '@angular/router';
 // for public section
 import { HomeComponent } from './public/home/home.component';
 import { LoginComponent } from './common/login/login.component';
-
+import { LogoutComponent } from './common/logout/logout.component';
+import { SignupComponent } from './common/signup/signup.component';
 
 // For secured section
 import { BandmanagerComponent } from './secured/bandmanager/bandmanager.component';
@@ -15,11 +16,14 @@ import { ProfilemanagerComponent } from './secured/profilemanager/profilemanager
 import { UserManagerComponent } from './admin/user-manager/user-manager.component';
 
 
+
 const routes: Routes = [
   // Public
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent, data: { title: 'Home' } },
   { path: 'login', component: LoginComponent, data: { title: 'Login' } },
+  { path: 'logout', component: LogoutComponent },
+  { path: 'signup', component: SignupComponent },
 
   // Secured
   { path: 'edit/band/:id', component: BandmanagerComponent, data: { title: 'Edit' } },

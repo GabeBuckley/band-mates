@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 import { MatButtonModule } from '@angular/material/button';
@@ -12,6 +12,8 @@ import { MatIconModule, MatToolbarModule, MatTableModule } from '@angular/materi
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -23,6 +25,8 @@ import { UserManagerComponent } from './admin/user-manager/user-manager.componen
 import { LoginComponent } from './common/login/login.component';
 import { BandmanagerComponent } from './secured/bandmanager/bandmanager.component';
 import { ProfilemanagerComponent } from './secured/profilemanager/profilemanager.component';
+import { LogoutComponent } from './common/logout/logout.component';
+import { SignupComponent } from './common/signup/signup.component';
 
 
 
@@ -34,23 +38,29 @@ import { ProfilemanagerComponent } from './secured/profilemanager/profilemanager
     UserManagerComponent,
     LoginComponent,
     BandmanagerComponent,
-    ProfilemanagerComponent
+    ProfilemanagerComponent,
+    LogoutComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MatToolbarModule,
+    FormsModule,
     HttpClientModule,
-    MatTableModule,
-    MatInputModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatButtonToggleModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatInputModule,
     MatListModule,
     MatMenuModule,
-    MatExpansionModule,
-    MatCardModule
+    MatSelectModule,
+    MatStepperModule,
+    MatTableModule,
+    MatToolbarModule
   ],
   exports: [
     MatButtonModule

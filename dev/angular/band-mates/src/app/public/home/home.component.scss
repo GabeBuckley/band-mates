@@ -1,4 +1,4 @@
-@import '~@angular/material/theming';
+@import '../../../styles.scss';
 
 .home {
   padding: 0.5rem;
@@ -9,5 +9,11 @@
     @include mat-elevation(4);
 
     min-height: 10rem;
+  }
+
+  .home-screen {
+    h2 {
+      color: $app-primary;
+    }
   }
 }

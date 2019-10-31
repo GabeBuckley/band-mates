@@ -4,12 +4,27 @@
     <h3>Welcome {{loggedInUser.displayName}}</h3>
   </article>
 
-  <article class="band-options">
+  <article class="band-options" *ngIf="loggedInUser">
     <h3>My Bands</h3>
     <mat-list *ngIf="loggedInUser && loggedInUser.bands">
       <mat-list-item *ngFor="let band of loggedInUser.bands">
         <a routerLink="/edit/band/{{band.id}}"> {{band.name}} </a>
       </mat-list-item>
     </mat-list>
+  </article>
+
+  <article class="home-screen" *ngIf="!loggedInUser">
+    <h2>bandmates.io</h2>
+    <p class="leading-para">Get gigs, get paid</p>
+    <p>Made by working musicians, for working musicians</p>
+    <button routerLink="/login" mat-raised-button color="primary">Log in</button>
+    <p>Easily:</p>
+    <ul>
+      <li>Manage multiple lineups - full band, trio, solo etc</li>
+      <li>View availability for all band members</li>
+      <li>Find venues near you looking for bands like yours</li>
+    </ul>
+    <button mat-raised-button color="accent">Tell Me More</button>
+    <button routerLink="/signup" mat-raised-button color="primary">Sign Me Up</button>
   </article>
 </section>

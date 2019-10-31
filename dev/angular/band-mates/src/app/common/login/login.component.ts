@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   }
 
   ngOnInit() {
+    sessionStorage.removeItem('logged_in_user');
   }
 
 
