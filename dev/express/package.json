@@ -1,0 +1,11 @@
+{
+  "name": "band-mates-server",
+  "version": "1.0.0",
+  "description": "Back end for band-mates application",
+  "main": "./src/index.js",
+  "scripts": {
+    "run": "node ./src/index.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
