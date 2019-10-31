@@ -186,6 +186,9 @@ $theme-warn: mat-palette($mat-warn, main, lighter, darker);
 $theme: mat-dark-theme($theme-primary, $theme-accent, $theme-warn);
 $altTheme: mat-light-theme($theme-primary, $theme-accent, $theme-warn);
 
+
+$app-primary: #57728d;
+
 // Theme Init
 @include angular-material-theme($theme);
 
@@ -224,6 +227,36 @@ body {
   color: $light-text;
 }
 
+a {
+  color: adjust-color($color: $light-text, $lightness: -10%, $alpha: 1.0);
+  text-decoration: none;
+  transition: 0.25s all;
+
+  &:hover {
+    color: $light-text;
+  }
+}
+
 span.spacer {
   flex: auto;
+}
+
+.toolbar {
+  text-align: right;
+}
+
+.band-member-list-card {
+  mat-card-title {
+    font-size: 15px;
+  }
+}
+
+.user-avatar {
+  img {
+    min-width: 2rem;
+    min-height: 2rem;
+    max-width: 2rem;
+    max-height: 2rem;
+    border-radius: 50%;
+  }
 }

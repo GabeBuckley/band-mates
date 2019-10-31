@@ -1,0 +1,57 @@
+<section class="band-manager">
+  <article class="band-manager-toolbar" *ngIf="selectedBand">
+    <mat-toolbar color="accent">
+      <mat-toolbar-row>
+        <span>{{selectedBand.name}}</span>
+        <span class="spacer"></span>
+        <mat-icon [matMenuTriggerFor]="menu" (click)="toggleMenu()" aria-hidden="false" aria-label="Open Menu">
+          menu
+        </mat-icon>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </article>
+  <article class="band-manager-menu">
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item>Settings</button>
+      <button mat-menu-item>Help</button>
+    </mat-menu>
+  </article>
+
+  <article class="band-configuration-manager" *ngIf="selectedBand">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <div mat-card-avatar class="example-header-image"></div>
+        <mat-card-title>Configurations</mat-card-title>
+        <mat-card-subtitle>Create your lineups here</mat-card-subtitle>
+      </mat-card-header>
+      <div class="toolbar">
+        <button mat-icon-button color="primary">
+          <mat-icon>add_circle_outline</mat-icon>
+        </button>
+      </div>
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let config of selectedBand.configurations" (opened)=" panelOpenState=true"
+          (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{config.name}}
+            </mat-panel-title>
+            <mat-panel-description>
+              {{config.description}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <div class="toolbar">
+            <button mat-icon-button color="primary">
+              <mat-icon color="warn">remove_circle_outline</mat-icon>
+            </button>
+          </div>
+          <h3>Members:</h3>
+          <mat-card class="band-member-list-card" *ngFor="let member of config.members">
+            <mat-card-title>{{member.displayName}}</mat-card-title>
+            <mat-card-subtitle *ngIf="member.roles">{{member.roles}}</mat-card-subtitle>
+          </mat-card>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-card>
+  </article>
+</section>

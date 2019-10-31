@@ -1,20 +1,19 @@
 import { Component, OnInit, Inject } from '@angular/core';
-import { MatToolbar } from '@angular/material';
 import { IUser } from 'src/app/interfaces';
 import { ApiService } from '../../common/services/api.service';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-profilemanager',
+  templateUrl: './profilemanager.component.html',
+  styleUrls: ['./profilemanager.component.scss']
 })
-export class HeaderComponent implements OnInit {
-  private imageServer = 'http://localhost:3000/userdata/';
+export class ProfilemanagerComponent implements OnInit {
 
   loggedInUser: IUser = null;
-  constructor(@Inject(ApiService) private api: ApiService) { }
 
-  ngOnInit() {
+  private imageServer = 'http://localhost:3000/userdata/';
+
+  constructor(@Inject(ApiService) private api: ApiService) {
     const sessionUserData = sessionStorage.getItem('logged_in_user');
     if (sessionUserData) {
       const sessionUser = JSON.parse(sessionUserData);
@@ -27,6 +26,9 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  ngOnInit() {
+  }
+
   public get userAvatarURI() {
     const defaultAvatarImage = '/assets/default_avatar.png';
     if (this.loggedInUser) {
@@ -36,5 +38,4 @@ export class HeaderComponent implements OnInit {
     }
     return defaultAvatarImage;
   }
-
 }

@@ -1,12 +1,20 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MatIconModule, MatToolbarModule, MatTableModule } from '@angular/material';
-import { MatInputModule } from '@angular/material/input';
+
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatIconModule, MatToolbarModule, MatTableModule } from '@angular/material';
+import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
+import { MatStepperModule } from '@angular/material/stepper';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -15,6 +23,10 @@ import { HomeComponent } from './public/home/home.component';
 import { HeaderComponent } from './common/header/header.component';
 import { UserManagerComponent } from './admin/user-manager/user-manager.component';
 import { LoginComponent } from './common/login/login.component';
+import { BandmanagerComponent } from './secured/bandmanager/bandmanager.component';
+import { ProfilemanagerComponent } from './secured/profilemanager/profilemanager.component';
+import { LogoutComponent } from './common/logout/logout.component';
+import { SignupComponent } from './common/signup/signup.component';
 
 
 
@@ -24,20 +36,31 @@ import { LoginComponent } from './common/login/login.component';
     HomeComponent,
     HeaderComponent,
     UserManagerComponent,
-    LoginComponent
+    LoginComponent,
+    BandmanagerComponent,
+    ProfilemanagerComponent,
+    LogoutComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MatToolbarModule,
+    FormsModule,
     HttpClientModule,
-    MatTableModule,
-    MatInputModule,
+    ReactiveFormsModule,
     MatButtonModule,
     MatButtonToggleModule,
-    MatListModule
+    MatCardModule,
+    MatExpansionModule,
+    MatIconModule,
+    MatInputModule,
+    MatListModule,
+    MatMenuModule,
+    MatSelectModule,
+    MatStepperModule,
+    MatTableModule,
+    MatToolbarModule
   ],
   exports: [
     MatButtonModule

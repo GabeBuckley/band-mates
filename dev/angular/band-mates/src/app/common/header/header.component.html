@@ -1,8 +1,27 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Third Line</span>
-    <span class="example-spacer"></span>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">favorite</mat-icon>
-    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+    <span><a routerLink="/home">bandmates.io</a></span>
+    <span class="spacer"></span>
+    <div class="user-avatar" *ngIf="loggedInUser" routerLink="edit/profile">
+      <img src="{{userAvatarURI}}" />
+    </div>
+    <mat-icon class="header-icon" *ngIf="!loggedInUser" aria-hidden="false" aria-label="Edit your profile"
+      routerLink="signup">
+      person_outline
+    </mat-icon>
+    <mat-icon [matMenuTriggerFor]="menu" aria-hidden="false" aria-label="Open Menu">
+      menu
+    </mat-icon>
   </mat-toolbar-row>
 </mat-toolbar>
+<mat-menu #menu="matMenu">
+  <div class="logged-in-menu" *ngIf="loggedInUser">
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Help</button>
+    <button mat-menu-item routerLink="/logout">Log out</button>
+  </div>
+  <div class="logged-out-menu" *ngIf="!loggedInUser">
+    <button mat-menu-item>Sign Up</button>
+    <button mat-menu-item routerLink="/login">Log in</button>
+  </div>
+</mat-menu>

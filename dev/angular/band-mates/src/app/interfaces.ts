@@ -1,20 +1,12 @@
+
+export interface IBandRole {
+    id: number;
+    name?: string;
+}
 export interface IBandMember {
     id: number;
     name?: string;
-    instrument?: string;
-}
-
-export interface IBandConfiguration {
-    id: number;
-    name?: string;
-    members: Array<IBandMember>;
-}
-
-
-export interface IBand {
-    id: number;
-    name?: string;
-    configurations: Array<IBandConfiguration>;
+    roles?: Array<IBandRole>;
 }
 
 
@@ -36,6 +28,7 @@ export interface IUserData {
 
 
 export interface IUser {
+
     id?: number;
     username: string;
     userData: IUserData;
@@ -44,9 +37,23 @@ export interface IUser {
     bands?: Array<IBand>;
     serviceProviders?: Array<IServiceProvider>;
     venues?: Array<IVenue>;
+
+    avatar?: string;
 }
 
+export interface IBandConfiguration {
+    id: number;
+    name?: string;
 
+    members?: Array<IBandMember>;
+}
+
+export interface IBand {
+    id: number;
+    name?: string;
+    slug?: string;
+    configurations: Array<IBandConfiguration>;
+}
 
 
 
