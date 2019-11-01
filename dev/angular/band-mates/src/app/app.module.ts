@@ -27,6 +27,7 @@ import { BandmanagerComponent } from './secured/bandmanager/bandmanager.componen
 import { ProfilemanagerComponent } from './secured/profilemanager/profilemanager.component';
 import { LogoutComponent } from './common/logout/logout.component';
 import { SignupComponent } from './common/signup/signup.component';
+import { ToolbarComponent } from './common/toolbar/toolbar.component';
 
 
 
@@ -40,7 +41,8 @@ import { SignupComponent } from './common/signup/signup.component';
     BandmanagerComponent,
     ProfilemanagerComponent,
     LogoutComponent,
-    SignupComponent
+    SignupComponent,
+    ToolbarComponent
   ],
   imports: [
     BrowserModule,
