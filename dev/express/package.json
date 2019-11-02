@@ -1,15 +1,15 @@
 {
-  "name": "band-mates-server",
-  "version": "1.0.0",
-  "description": "Back end for band-mates application",
-  "main": "./src/index.js",
-  "scripts": {
-    "run": "node ./src/index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1",
-    "mongodb": "^3.3.3"
-  }
+    "name": "band-mates-server",
+    "version": "1.0.0",
+    "description": "Back end for band-mates application",
+    "main": "./src/index.js",
+    "scripts": {
+        "run": "nodemon ./src/index.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mongodb": "^3.3.3"
+    }
 }

@@ -12,14 +12,14 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   users() {
-    return this.http.get(this.baseURI.concat('users'));
+    return this.http.get(this.baseURI.concat('usrdata/users'));
   }
 
   user(intUserID: number) {
-    return this.http.get(this.baseURI.concat('users/').concat(intUserID.toString()));
+    return this.http.get(this.baseURI.concat('usrdata/users/').concat(intUserID.toString()));
   }
   saveUser(objUser: IUser) {
-    return this.http.post(this.baseURI.concat('users'), objUser);
+    return this.http.post(this.baseURI.concat('usrdata/users'), objUser);
   }
 
   bands() {

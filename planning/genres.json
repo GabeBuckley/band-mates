@@ -1,0 +1,54 @@
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478aa7"},"id":"1","genre":"Acid Rock"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478aa8"},"id":"2","genre":"Blues"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478aa9"},"id":"3","genre":"Blues Rock"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478aaa"},"id":"4","genre":"Chicago Blues"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478aab"},"id":"5","genre":"Country Blues"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478aac"},"id":"6","genre":"Delta Blues"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478aad"},"id":"7","genre":"Texas Blues"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478aae"},"id":{"$numberInt":"8"},"genre":"Dancehall"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478aaf"},"id":{"$numberInt":"9"},"genre":"Reggae"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ab0"},"id":"10","genre":"Calypso"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ab1"},"id":"11","genre":"Mambo"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ab2"},"id":"12","genre":"Ska"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ab3"},"id":"13","genre":"Rumba"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ab4"},"id":"14","genre":"Salsa"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ab5"},"id":"15","genre":"Novelty"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ab6"},"id":"16","genre":"Parody"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ab7"},"id":"17","genre":"Alt Country"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ab8"},"id":"18","genre":"Oz Country"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ab9"},"id":"19","genre":"Oz Rock"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478aba"},"id":"20","genre":"Bluegrass"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478abb"},"id":"21","genre":"Country"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478abc"},"id":"22","genre":"Country Pop"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478abd"},"id":"23","genre":"Country Rap"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478abe"},"id":"24","genre":"Outlaw Country"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478abf"},"id":"25","genre":"Traditional Country"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ac0"},"id":"26","genre":"Rockabilly"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ac1"},"id":"27","genre":"Hellbilly"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ac2"},"id":"28","genre":"Psychobilly"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ac3"},"id":"29","genre":"Texas Country"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ac4"},"id":"30","genre":"Truck-driving Country"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ac5"},"id":"31","genre":"Western Swing"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ac6"},"id":"32","genre":"Zydeco"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ac7"},"id":"33","genre":"Cajun"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ac8"},"id":"34","genre":"New Age"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ac9"},"id":"35","genre":"Lounge"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478aca"},"id":"36","genre":"Ambient"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478acb"},"id":"37","genre":"Breakbeat"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478acc"},"id":"38","genre":"Disco"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478acd"},"id":"39","genre":"EDM"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ace"},"id":"40","genre":"Electronica"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478acf"},"id":"41","genre":"Boogie"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ad0"},"id":"42","genre":"Techno"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ad1"},"id":"43","genre":"Acid Techno"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ad2"},"id":"44","genre":"JPop"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ad3"},"id":"45","genre":"KPop"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ad4"},"id":"46","genre":"Hardstyle"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ad5"},"id":"47","genre":"Drum n Bass"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ad6"},"id":"48","genre":"Dub"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ad7"},"id":"49","genre":"Electro"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ad8"},"id":"50","genre":"Hip Hop"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ad9"},"id":"51","genre":"Industrial"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478ada"},"id":"52","genre":"Synthpop"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478adb"},"id":"53","genre":"Trance"}
+{"_id":{"$oid":"5dbb8399e30a5f0bbc478adc"},"id":"54","genre":"Acid Trance"}

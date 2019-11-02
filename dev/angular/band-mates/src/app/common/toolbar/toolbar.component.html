@@ -1,7 +1,13 @@
 <div class="app-toolbar">
-  <div class="app-toolbar-notch">
-    <button mat-fab aria-label="Home button icon">
-      <mat-icon>home</mat-icon>
-    </button>
-  </div>
+    <div class="app-toolbar-left">
+        <mat-icon>account_balance_wallet</mat-icon>
+        <mat-icon>calendar_today</mat-icon>
+    </div>
+    <div class="app-toolbar-notch">
+        <button routerLink="/home" mat-fab color="primary" aria-label="Home button icon"><mat-icon>home</mat-icon></button>
+    </div>
+    <div class="app-toolbar-right">
+        <mat-icon>favorite</mat-icon>
+        <mat-icon>notifications</mat-icon>
+    </div>
 </div>

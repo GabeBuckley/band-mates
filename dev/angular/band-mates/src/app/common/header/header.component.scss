@@ -1,0 +1,9 @@
+@import '../../../styles.scss';
+mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10000;
+    @include mat-elevation(8);
+}

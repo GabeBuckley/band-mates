@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ApiService } from '../../common/services/api.service';
-import { IUser, IUserData } from 'src/app/interfaces';
+import { IUser } from 'src/app/interfaces';
 import { AES, enc } from 'crypto-ts';
 import { Observable } from 'rxjs';
 
@@ -34,9 +34,9 @@ export class LoginComponent implements OnInit {
           if (data.hasOwnProperty(user)) {
             const objUser: IUser = data[user];
 
-            if ((objUser.username === strUsername) || (objUser.userData && (objUser.userData.email === strUsername))) {
-              if (objUser.userData && (objUser.userData.passwordHash)) {
-                const hashBytes = AES.decrypt(objUser.userData.passwordHash.toString(), '27011976');
+            if ((objUser.username === strUsername) || (objUser.email === strUsername)) {
+              if (objUser.passwordHash) {
+                const hashBytes = AES.decrypt(objUser.passwordHash.toString(), '27011976');
                 const decryptedData = hashBytes.toString(enc.Utf8);
                 if (decryptedData === strPass) {
                   this.loggedInUser = objUser;

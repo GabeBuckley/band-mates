@@ -20,19 +20,16 @@ export interface IVenue {
     name?: string;
 }
 
-export interface IUserData {
-    name?: string;
-    email?: string;
-    passwordHash?: string;
-}
+
 
 
 export interface IUser {
 
     id?: number;
-    username: string;
-    userData: IUserData;
-    displayName?: string;
+    username?: string;
+    name?: string;
+    email: string;
+    passwordHash: string;
 
     bands?: Array<IBand>;
     serviceProviders?: Array<IServiceProvider>;
