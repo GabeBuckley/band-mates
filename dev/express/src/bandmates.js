@@ -4,6 +4,7 @@ const GENRES = require('./ref_data/genres');
 
 // USR_DATA
 const USERS = require('./usr_data/users');
+const BANDS = require('./usr_data/bands');
 
 
 
@@ -12,6 +13,7 @@ module.exports = {
         genres: GENRES
     },
     usrData: {
-        users: USERS
+        users: USERS,
+        bands: BANDS
     }
 };

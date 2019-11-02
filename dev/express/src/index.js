@@ -86,6 +86,27 @@ MongoClient.connect(MONGO_URL, (err, client) => {
 
     // USR_DATA CRUD routes
 
+    // List all bands
+    app.get('/usrdata/bands',
+        (req, res) => {
+            bandmates.usrData.bands.list(req, res, db)
+        }
+    );
+
+    // Get band by id
+    app.get('/usrdata/bands/:userId',
+        (req, res) => {
+            bandmates.usrData.bands.read(req, res, db)
+        }
+    );
+
+    // Create a band
+    app.put('/usrdata/bands/',
+        (req, res) => {
+            bandmates.usrData.bands.create(req, res, db)
+        }
+    );
+
     // List all users
     app.get('/usrdata/users',
         (req, res) => {
