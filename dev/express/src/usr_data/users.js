@@ -1,4 +1,5 @@
 const users = {};
+const moment = require('moment');
 
 users.create = async(req, res, db) => {
     const latest = await users.getNextId(db);
@@ -85,6 +86,70 @@ users.read = (req, res, db) => {
         }
     );
 }
+
+users.getLoggedInUserData = async(req, res, db) => {
+    const uId = req.params.userId;
+    const coll = db.collection('usr_users');
+    const bandColl = db.collection('usr_bands');
+    const gigColl = db.collection('usr_band_gigs');
+    const venueColl = db.collection('usr_venues');
+    const objUser = await coll.findOne({ id: parseInt(uId, 10) });
+
+    const objInterests = {};
+    const arrFollowedBands = objUser.followedBands;
+    const arrBandList = [];
+    const arrGigList = [];
+    const arrFeedItems = [];
+
+    for (var i = 0; i < arrFollowedBands.length; i++) {
+        const objBand = await bandColl.findOne({ id: arrFollowedBands[i] });
+        arrBandList.push(objBand);
+
+        // const arrGigs = await gigColl.find({ bandid: objBand.id }).toArray();
+        const gigs = await gigColl.find({ bandid: 4 }).toArray();
+        while (gigs.length > 0) {
+            const gig = gigs.pop();
+
+            const objFeedItem = {
+                occurrencedatetime: gig.datetime,
+                occurrencedate: moment(gig.datetime).format('MMMM Do'),
+                occurrencetime: moment(gig.datetime).format('h:mm a'),
+                occurrencetype: 'gig',
+                artist: objBand,
+                avatarimg: '/assets/usr_data/bands/' + objBand.id + '/' + objBand.avatar,
+                bannerimg: '/assets/usr_data/bands/' + objBand.id + '/' + objBand.banner,
+                venue: await venueColl.findOne({ id: gig.venueid })
+            }
+            arrFeedItems.push(objFeedItem);
+        }
+    }
+
+    objInterests.bands = arrBandList;
+    objInterests.feed = arrFeedItems;
+
+    objUser.interests = objInterests;
+
+    return objUser;
+}
+
+users.getLoggedInUser = async(req, res, db) => {
+    const uId = req.params.userId;
+    const coll = db.collection('usr_users');
+
+    coll.findOne({ id: parseInt(uId, 10) },
+        (err, result) => {
+            if (err) throw err;
+
+            console.log(result);
+            result.gigList = {};
+            console.log(result);
+
+            res.send(result);
+        }
+    );
+}
+
+
 
 users.update = (req, res, db) => {
     res.send({ requestBody: req.body })

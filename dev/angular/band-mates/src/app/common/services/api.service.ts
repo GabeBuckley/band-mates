@@ -18,6 +18,11 @@ export class ApiService {
   user(intUserID: number) {
     return this.http.get(this.baseURI.concat('usrdata/users/').concat(intUserID.toString()));
   }
+
+loggedInUser(intUserID: number) {
+  return this.http.get(this.baseURI.concat('usrdata/users/loggedin/').concat(intUserID.toString()));
+}
+
   saveUser(objUser: IUser) {
     return this.http.post(this.baseURI.concat('usrdata/users'), objUser);
   }

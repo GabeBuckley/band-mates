@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
     const sessionUserData = sessionStorage.getItem('logged_in_user');
     if (sessionUserData) {
       const sessionUser = JSON.parse(sessionUserData);
-      this.api.user(sessionUser.id).subscribe(
+      this.api.loggedInUser(sessionUser.id).subscribe(
         (data: any) => {
           this.loggedInUser = data;
           console.log(this.loggedInUser);

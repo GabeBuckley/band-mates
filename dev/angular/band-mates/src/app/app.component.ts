@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
       this.api.user(sessionUser.id).subscribe(
         (data: any) => {
           this.loggedInUser = data;
-          console.log(this.loggedInUser);
+          // console.log(this.loggedInUser);
         }
       );
     }

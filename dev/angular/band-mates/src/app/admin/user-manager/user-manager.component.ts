@@ -1,6 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { ApiService } from '../../common/services/api.service';
-import { IUser, IUserData } from 'src/app/interfaces';
+import { IUser } from 'src/app/interfaces';
 import { MatPaginator, MatSort, MatTableDataSource } from '@angular/material';
 import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 @Component({
@@ -11,7 +11,7 @@ import { FormControl, FormBuilder, FormGroup, Validators } from '@angular/forms'
 export class UserManagerComponent implements OnInit {
 
   public mode = 'browse_list';
-  public userList: MatTableDataSource<IUserData>;
+  public userList: MatTableDataSource<IUser>;
   displayedColumns: string[] = ['id', 'username', 'email'];
 
   constructor(@Inject(ApiService) private api: ApiService) { }
@@ -36,12 +36,8 @@ export class UserManagerComponent implements OnInit {
     const strName = (document.querySelector('#name') as HTMLInputElement).value;
 
     const newUser: IUser = {
-      username: strUsername,
-      userData: {
-        name: strName,
-        email: strEmail
-      },
-      displayName: strName
+      email: strEmail,
+      passwordHash: ''
     };
 
     if (this.isValidUser(newUser)) {

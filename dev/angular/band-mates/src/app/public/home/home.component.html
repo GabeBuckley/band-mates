@@ -1,81 +1,21 @@
 <section class="home">
 
     <article class="home-screen" *ngIf="loggedInUser">
-        <mat-card class="example-card">
+        <mat-card *ngFor="let feeditem of loggedInUser.interests.feed" class="feed-item">
             <mat-card-header>
-                <div mat-card-avatar class="avatar" style="background-image: url(https://scontent-syd2-1.xx.fbcdn.net/v/t31.0-8/1039847_10152616603362973_6797470622511661211_o.jpg?_nc_cat=1&_nc_oc=AQmi41csixLAn8s-cQEa6FWCFZeUOnPKmPfPxTp83EdCh949sNArjT7eG4m-Njvsw7I&_nc_ht=scontent-syd2-1.xx&oh=583cbac15e19acff19a97f048e2dc9b8&oe=5E595FE2);">
+                <div mat-card-avatar class="avatar" [ngStyle]="{'background-image': 'url(' + feeditem.avatarimg + ')'}">
                 </div>
-                <mat-card-title>Motley Crue</mat-card-title>
-                <mat-card-subtitle>Has a gig near you!</mat-card-subtitle>
+                <mat-card-title>{{feeditem.artist.name}}</mat-card-title>
+                <mat-card-subtitle *ngIf="feeditem.occurrencetype === 'gig'">Is playing a gig!</mat-card-subtitle>
             </mat-card-header>
-            <img mat-card-image src="https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/55615808_10157174682402973_1265170118405521408_o.jpg?_nc_cat=103&_nc_oc=AQnkXxJmsaJ4VnQohVJ4LwEopzU1J8JqVjeyL9KmdecNGPOieK9hhRtdhe184iHBBqA&_nc_ht=scontent-syd2-1.xx&oh=323daa6123d7f57e85e7430e4f44fe70&oe=5E194099"
-                alt="Photo of a Shiba Inu">
+            <img mat-card-image src="{{feeditem.bannerimg}}" alt="{{feeditem.artist.name}} banner">
             <mat-card-content>
                 <p>
-                    Playing at the Prince of Wales Hotel on November 9th at 8pm
+                    Playing at {{feeditem.venue.name}} on {{feeditem.occurrencedate}} at {{feeditem.occurrencetime}}
                 </p>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-            </mat-card-actions>
-        </mat-card>
-
-        <mat-card class="example-card">
-            <mat-card-header>
-                <div mat-card-avatar class="avatar" style="background-image: url(https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/13315599_1127330343993932_6673089638527570361_n.jpg?_nc_cat=106&_nc_oc=AQnJHBYbDunqteGF3r29oqOxlmcusZCRKNd6JIT1WUheHYDdZ0NA3fGcXywJSt9AMy4&_nc_ht=scontent-syd2-1.xx&oh=a94b46ed14fb1ae35cce6e3a8dcbe6bf&oe=5E57284C);">
-                </div>
-                <mat-card-title>The Press Club</mat-card-title>
-                <mat-card-subtitle>Added a gig you may be interested in</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/12042804_982803158446652_8217624098921852793_n.jpg?_nc_cat=106&_nc_oc=AQnkrRh9PN8Q9j0KbcfJ_dLPbO1buUVu0oFG60KCPT1h9gewxPYNXg-2v1x1UyIz8mI&_nc_ht=scontent-syd2-1.xx&oh=967537b3fe2caaebb38a0bbc3f0a028e&oe=5E4F0F30"
-                alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <p>
-                    Suicide Country Hour playing on November 15th at 9pm
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-            </mat-card-actions>
-        </mat-card>
-
-        <mat-card class="example-card">
-            <mat-card-header>
-                <div mat-card-avatar class="avatar" style="background-image: url(https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/49899503_1216520398495715_2594116416642744320_o.jpg?_nc_cat=101&_nc_oc=AQkEQ1ZGJ8yh1urvuqDK9mJKsaKDL-1jJMYQijmsT-493bupW1VTEazuIrb9S6BhngE&_nc_ht=scontent-syd2-1.xx&oh=56d4c2c4f34d65f3511632b5bc83fe3e&oe=5E5741D6);">
-                </div>
-                <mat-card-title>The Fat Pigs</mat-card-title>
-                <mat-card-subtitle>Blues band from Beachmere</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/52306244_1243326365815118_6396392251588608000_n.jpg?_nc_cat=105&_nc_oc=AQmOLBS1BwoT-jXurphvKbsYOTXVcvmc3YZTBnIMMdyqNVyGO87NZ_beS-DRNGwux68&_nc_ht=scontent-syd2-1.xx&oh=b50f893cbb93f2be713e067a1a43801d&oe=5E51D609"
-                alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <p>
-                    Tagged with blues, 24km from you
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
-            </mat-card-actions>
-        </mat-card>
-
-        <mat-card class="example-card">
-            <mat-card-header>
-                <div mat-card-avatar class="avatar" style="background-image: url(https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/73254410_825317804553295_8677985214024122368_n.jpg?_nc_cat=102&_nc_oc=AQlVguKwjyn86lnjs1zmT_yt2NfA5yYrz1ZBfCN4COUuLCMieesPruJIYIGVsAhbrTA&_nc_ht=scontent-syd2-1.xx&oh=e5880dae5ca50857971dd06638340831&oe=5E60A73E);"></div>
-                <mat-card-title>ABBA</mat-card-title>
-                <mat-card-subtitle>Has a gig near you!</mat-card-subtitle>
-            </mat-card-header>
-            <img mat-card-image src="https://scontent-syd2-1.xx.fbcdn.net/v/t1.0-9/62476698_3435511216474566_1183551617929052160_n.jpg?_nc_cat=111&_nc_oc=AQlTqfpvtTKgO_DSXEejMqcLhyPjq3UVeX1U8DHkvEFQzqPCR-Yf5tTd535wtbuifvM&_nc_ht=scontent-syd2-1.xx&oh=143ccecce25f0488455147ed2a46034e&oe=5E63C92E"
-                alt="Photo of a Shiba Inu">
-            <mat-card-content>
-                <p>
-                    The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan. A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally bred for hunting.
-                </p>
-            </mat-card-content>
-            <mat-card-actions>
-                <button mat-button>LIKE</button>
+                <button mat-button><mat-icon>calendar_today</mat-icon> Add to schedule</button>
                 <button mat-button>SHARE</button>
             </mat-card-actions>
         </mat-card>

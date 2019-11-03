@@ -57,7 +57,21 @@ MongoClient.connect(MONGO_URL, (err, client) => {
 
     const db = client.db('bandmates')
 
+
     app.get('/', (req, res) => res.send('Hello World!'));
+
+
+    app.get('/test', async(req, res) => {
+        const ret = {
+            info: 'Test Function'
+        };
+
+        const coll = db.collection('usr_band_gigs');
+        const gigs = await coll.find({ bandid: 4 }).toArray();
+        ret.gig = gigs;
+
+        res.send(ret);
+    });
 
     // REF_DATA CRUD routes
 
@@ -118,6 +132,14 @@ MongoClient.connect(MONGO_URL, (err, client) => {
     app.get('/usrdata/users/:userId',
         (req, res) => {
             bandmates.usrData.users.read(req, res, db)
+        }
+    );
+
+    // Get full user details by id
+    app.get('/usrdata/users/loggedin/:userId',
+        async(req, res) => {
+            const userData = await bandmates.usrData.users.getLoggedInUserData(req, res, db);
+            res.send(userData);
         }
     );
 

@@ -1,18 +1,23 @@
 @import '~@angular/material/theming';
-
 .login {
-  padding: 0.5rem;
-
-  fieldset {
-    padding: 0.75rem;
-    @include mat-elevation(4);
-
-    .full-width {
-      display: block;
+    height: 70%;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    align-items: stretch;
+    justify-content: space-around;
+    fieldset {
+        padding: 0.75rem;
+        @include mat-elevation(4);
+        legend {
+            font-weight: bold;
+        }
+        .full-width {
+            display: block;
+        }
+        .button-row {
+            text-align: right;
+        }
     }
-
-    .button-row {
-      text-align: right;
-    }
-  }
 }
