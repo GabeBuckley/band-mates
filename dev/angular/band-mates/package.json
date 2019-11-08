@@ -3,7 +3,7 @@
     "version": "0.0.0",
     "scripts": {
         "ng": "ng",
-        "start": "ng serve --host speakezy.local --port 8888",
+        "start": "ng serve --host speakezy.local --port 80",
         "build": "ng build",
         "test": "ng test",
         "lint": "ng lint",
@@ -19,12 +19,14 @@
         "@angular/core": "^8.2.13",
         "@angular/forms": "^8.2.13",
         "@angular/material": "^8.2.3",
+        "@angular/material-moment-adapter": "^8.2.3",
         "@angular/platform-browser": "^8.2.13",
         "@angular/platform-browser-dynamic": "^8.2.13",
         "@angular/router": "^8.2.13",
         "crypto-ts": "^1.0.2",
         "hammerjs": "^2.0.8",
         "json-server": "^0.15.1",
+        "moment": "^2.24.0",
         "rxjs": "~6.4.0",
         "tslib": "^1.10.0",
         "zone.js": "~0.9.1"

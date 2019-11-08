@@ -1,0 +1,29 @@
+@import '../../../styles.scss';
+section.day-view {
+    position: absolute;
+    top: 4.5rem;
+    bottom: 9.5rem;
+    left: 0.75rem;
+    right: 0.75rem;
+    z-index: 5000;
+    background-color: #222222F0;
+    @include mat-elevation(6);
+    overflow: hidden;
+    height: unset;
+    width: unset;
+    transition: all 0.2s;
+    &.hidden {
+        top: 100%;
+        left: 50%;
+        right: 50%;
+        height: 0;
+        width: 0;
+    }
+    h2 {
+        mat-icon {
+            float: right;
+            margin: 0.5rem;
+            color: #b84d4d;
+        }
+    }
+}

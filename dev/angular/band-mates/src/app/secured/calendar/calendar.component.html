@@ -1,0 +1,25 @@
+<p>calendar works!</p>
+<section #calRoot class="calendar">
+    <mat-calendar #calendar (selectedChange)="handleDateSelected($event)"></mat-calendar>
+</section>
+
+<section #dayView class="day-view">
+    <h2>{{selectedDate}}
+        <mat-icon (click)="hideDayView()">cancel</mat-icon>
+    </h2>
+
+    <div class="my-schedule">
+        <fieldset>
+            <legend><i class="icon-show"></i> Your shows:</legend>
+            Nothing booked! Check out some suggestions below:
+        </fieldset>
+
+    </div>
+    <div class="my-suggestions">
+        <fieldset>
+            <legend><i class="icon-venue"></i> Your suggestions:</legend>
+            No suggestions found :(
+        </fieldset>
+
+    </div>
+</section>

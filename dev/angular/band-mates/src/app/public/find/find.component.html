@@ -1,0 +1,53 @@
+<section class="find-what" *ngIf="findWhat === ''">
+    <h2>What are you looking for?</h2>
+    <article class="find-home-button" (click)='enableBandSearch()'>
+        <i class="icon-band"></i>
+        <div>
+            <h3>Find Bands</h3>
+            <p>Local bands playing the music you love</p>
+        </div>
+    </article>
+    <article class="find-home-button" (click)='enableShowSearch()'>
+        <i class="icon-show"></i>
+        <div>
+            <h3>Find Shows</h3>
+            <p>The hottest acts playing soon near you</p>
+        </div>
+    </article>
+    <article class="find-home-button" (click)='enableVenueSearch()'>
+        <i class="icon-venue"></i>
+        <div>
+            <h3>Find Venues</h3>
+            <p>Looking for a new local?</p>
+        </div>
+    </article>
+</section>
+
+<section class="find-something" *ngIf="findWhat !== ''">
+    <div class="header" *ngIf="findWhat === 'bands'">
+        <i class="icon-band"></i>
+        <h2>Searching Bands</h2>
+        <a (click)="clearSearchMode()">
+            <mat-icon>keyboard_arrow_left</mat-icon> Back
+        </a>
+    </div>
+    <div class="header" *ngIf="findWhat === 'shows'">
+        <i class="icon-show"></i>
+        <h2>Searching Shows</h2>
+        <a (click)="clearSearchMode()">Back</a>
+    </div>
+    <div class="header" *ngIf="findWhat === 'venues'">
+        <i class="icon-venue"></i>
+        <h2>Searching Venues</h2>
+        <a (click)="clearSearchMode()">Back</a>
+    </div>
+
+    <div class="filter-bar">
+
+    </div>
+
+    <div class="search-bar">
+        <input type="text" [attr.placeholder]="searchPlaceholder" />
+        <mat-icon>search</mat-icon>
+    </div>
+</section>

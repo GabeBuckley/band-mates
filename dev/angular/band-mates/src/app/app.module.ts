@@ -7,6 +7,8 @@ import {MatBadgeModule} from '@angular/material/badge';
 import { MatButtonModule } from '@angular/material/button';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatCardModule } from '@angular/material/card';
+import { MatDatepickerModule } from '@angular/material';
+
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatIconModule, MatToolbarModule, MatTableModule } from '@angular/material';
 import { MatInputModule } from '@angular/material/input';
@@ -15,7 +17,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatSelectModule } from '@angular/material/select';
 import { MatStepperModule } from '@angular/material/stepper';
 
-
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -28,6 +30,8 @@ import { ProfilemanagerComponent } from './secured/profilemanager/profilemanager
 import { LogoutComponent } from './common/logout/logout.component';
 import { SignupComponent } from './common/signup/signup.component';
 import { ToolbarComponent } from './common/toolbar/toolbar.component';
+import { FindComponent } from './public/find/find.component';
+import { CalendarComponent } from './secured/calendar/calendar.component';
 
 
 
@@ -42,7 +46,9 @@ import { ToolbarComponent } from './common/toolbar/toolbar.component';
     ProfilemanagerComponent,
     LogoutComponent,
     SignupComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    FindComponent,
+    CalendarComponent
   ],
   imports: [
     BrowserModule,
@@ -63,7 +69,9 @@ import { ToolbarComponent } from './common/toolbar/toolbar.component';
     MatSelectModule,
     MatStepperModule,
     MatTableModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatMomentDateModule,
+    MatDatepickerModule
   ],
   exports: [
     MatButtonModule
